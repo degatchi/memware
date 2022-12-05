@@ -1,0 +1,20 @@
+[package]
+name = "memware"
+version = "0.1.0"
+edition = "2021"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+
+[dependencies]
+# Interact w/ EVM blockchains.
+ethers = { git = "https://github.com/gakonst/ethers-rs", features = ["ws", "rustls", "abigen"] }
+
+# Loading .env variables.
+dotenv = "0.15.0"
+
+# Running async threads.
+tokio = { version = "1.5", features = ["macros", "rt-multi-thread"] }
+
+# For quick and easy discord alerts.
+reqwest = "0.11.10"
